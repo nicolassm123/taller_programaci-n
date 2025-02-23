@@ -1,3 +1,6 @@
+nicolas macias gallego 
+
+
 1.	En java los datos primitivos se dividen en ocho categorías 
 
 Numéricos enteros. 
