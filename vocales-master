@@ -1,0 +1,34 @@
+package com.mycompany.contador_vocales;
+
+/**
+ *
+ * @author restr
+ */
+import java.util.Scanner; 
+
+public class Contador_vocales {
+    public static void main(String[] args) {
+        Scanner ingreso = new Scanner(System.in); 
+
+        System.out.print("Ingrese la palabra: ");
+        String palabra = ingreso.nextLine();
+
+        int vocales = 0, consonantes = 0;
+        String vocalesStr = "aeiouAEIOU"; 
+        for (int i = 0; i < palabra.length(); i++) {
+            char letra = palabra.charAt(i);
+
+            if (vocalesStr.indexOf(letra) != -1) {
+                vocales++;
+            } else if (Character.isLetter(letra)) {
+                consonantes++; 
+            }
+        }
+
+       
+        System.out.println("La palabra '" + palabra + "' contiene: " + vocales + " vocales.");
+        System.out.println("La palabra '" + palabra + "' contiene: " + consonantes + " consonantes.");
+
+        ingreso.close(); 
+    }
+}
